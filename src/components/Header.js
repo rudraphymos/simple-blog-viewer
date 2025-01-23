@@ -1,5 +1,5 @@
 import React from "react";
-import {RegisterLink, LoginLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+import { RegisterLink, LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import Link from "next/link";
 
@@ -9,7 +9,8 @@ const Header = async () => {
   console.log(user)
 
   const links = [
-    <Link href="/" key="home">Home</Link>
+    <Link href="/" key="home">Home</Link>,
+    <Link href="profile" key="profile">Profile</Link>
   ]
 
   return (
@@ -48,11 +49,11 @@ const Header = async () => {
           user ? <>
             <div className="flex items-center gap-4">
               <p className="text-sm flex items-center space-x-2">
-              <span>{user?.given_name} {user?.family_name}</span>
+                <span>{user?.given_name} {user?.family_name}</span>
               </p>
               <LogoutLink>Log Out</LogoutLink>
             </div>
-          </> : <div><LoginLink>Sign In</LoginLink> <RegisterLink>Sign Up</RegisterLink></div>
+          </> : <div><LoginLink>Login</LoginLink> <RegisterLink>Sign Up</RegisterLink></div>
         }
       </div>
     </div>

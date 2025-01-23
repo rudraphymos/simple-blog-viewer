@@ -19,7 +19,7 @@ const Header = async () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="#" className="text-2xl font-bold text-primary">Simple Blog Viewer</a>
+              <Link href="/" className="text-2xl font-bold text-primary">Simple Blog Viewer</Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">

@@ -9,7 +9,7 @@ export default async function HomePage() {
       <h1 className="text-4xl font-extrabold text-center mb-8 text-primary">Blog Posts</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.slice(0, 10).map((post) => (
-          <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+          <div key={post.id} className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col justify-between">
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-4 text-gray-900">
                 <Link href={`/blog/${post.id}`} className="hover:text-blue-600 transition-colors duration-200">

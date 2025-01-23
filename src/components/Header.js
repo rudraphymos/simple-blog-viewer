@@ -43,7 +43,7 @@ const Header = async () => {
           <div className="hidden md:block">
             {user ? (
               <div className="ml-4 flex items-center md:ml-6">
-                <p className="text-sm mr-4 text-gray-700">
+                <p className="text-sm mr-4 text-gray-300">
                   Welcome, {user?.given_name} {user?.family_name}
                 </p>
                 <LogoutLink className="px-4 py-2 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors">Log Out</LogoutLink>
